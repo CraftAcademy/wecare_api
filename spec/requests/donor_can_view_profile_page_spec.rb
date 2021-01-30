@@ -14,18 +14,23 @@ RSpec.describe 'Api::UserController', type: :request do
         expect(response).to have_http_status 200
       end
 
-      it 'is expected to return donors company name' do
-        expect(response_json['company_name']).to eq user.company_name
-      end
-      it 'is expected to return donors adress' do
-        expect(response_json['adress']).to eq user.adress
-      end
-      it 'is expected to return donors zipcode' do
-        expect(response_json['zipcode']).to eq user.zipcode
-      end
-      it 'is expected to return donors city' do
-        expect(response_json['city']).to eq user.city
-      end
-    end
+  it 'is expected to return a 200' do
+    expect(response).to have_http_status 200
+  end 
+
+  it 'is expected to return donors company name' do
+    expect(response_json['company_name']).to eq 'Netto'
+  end
+  it 'is expected to return donors adress' do 
+    expect(response_json['adress']).to eq 'Mangovägen 22'
+  end
+  it 'is expected to return donors zipcode' do 
+    expect(response_json['zipcode']).to eq 41522
+  end
+  it 'is expected to return donors city' do 
+    expect(response_json['city']).to eq 'Kiruna'
   end
 end
+end
+end
+

@@ -2,6 +2,7 @@ class Api::UserController < ApplicationController
   before_action :authenticate_user!
   before_action :find_resource
 
+
   def show
     render json: @user_profile
   end
